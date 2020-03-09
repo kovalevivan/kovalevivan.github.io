@@ -49,27 +49,17 @@
   ],
   "skills": [
     {
-      "name": "Backend Development",
+      "name": "Key technologies",
       "keywords": [
-        "Java EE",
-        "Spring Framework",
-        "Hibernate"
-      ]
-    },
-    {
-      "name": "Frontend Development",
-      "keywords": [
-        "GWT",
-        "Java Swing",
-        "HTML/CSS/JavaScript"
-      ]
-    },
-	{
-      "name": "System Administration",
-      "keywords": [
-        "Unix",
-        "Shell",
-        "Docker"
+        "Spring",
+        "Hibernate",
+		"Junit",
+		"Apache Kafka"
+        "Maven",
+		"Git",
+		"Jenkins",
+		"Docker",
+		"Kubernetes"
       ]
     },
 	{
@@ -78,7 +68,13 @@
         "C/C++",
         "Python",
         "Keras",
-		"Google Script"
+		"Google Script",
+		"Oracle DB",
+		"Postgres",
+		"Unix",
+		"GWT",
+        "Java Swing",
+        "HTML/CSS/JavaScript"
       ]
     }
   ],
