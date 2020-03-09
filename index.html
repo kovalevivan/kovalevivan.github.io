@@ -1,934 +1,733 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-		<title>Kovalev Ivan</title>
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<style>
-		body {
-  background: #E5DED4;
-  font: 15px Arial, Helvetica, sans-serif;
-  line-height: 1.4;
-  color: #929292;
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+	<title>Ivan Kovalev</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,400italic' rel='stylesheet' type='text/css'>
+	<style>
+		/********************************************
+* 	reset from
+* 	http://meyerweb.com/eric/tools/css/reset/
+*******************************************/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Custom reset */
+.main-summary p, 
+#publications .item,
+#skills .item,
+#languages .item,
+#references .item,
+#interests .item{
+	margin: 0;
 }
 
-.container {
-  margin: 0 auto;
-  padding: 10%;
+
+/****************
+*		SMARTPHONES		
+****************/
+em {
+	color: #757575;
+}
+p {
+	margin: 1em 0;
+}
+blockquote {
+	margin: 0;
+	margin-bottom: 1em;
+}
+strong {
+	font-weight: 700;
+	font-size: 1.1em;
+}
+ul {
+	margin-top: 1em; 
+}
+div.item {
+	margin: 1em 0 2em;
+	padding-bottom: 2em;
+}
+div.item:last-of-type {
+	margin: 0;
+	border-bottom: none;
+	padding-bottom: 0;
+}
+p {
+	text-align: justify;
+}
+
+
+/* Headers */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+}
+h1 {
+	font-size: 2.5rem;
+}
+h2,
+h3 {
+	font-size: 1rem;
+}
+a {
+	color: #EB5F51;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+/* Layout */
+body {
+	background: #f2f2f2;
+	line-height: 1.6;
+	font-size: 13px;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 #resume {
-  border-radius: 5px;
-  border: 1px solid #C7C7C7;
-  overflow: hidden;
+	padding: 1rem 0;
+	margin: 1rem auto;
 }
 
-section {
-  margin-bottom: 5rem;
+#header {
+	padding: 0 1em;
+	margin-bottom: 1em;
 }
 
-[class^="section-"] > .title {
-  text-transform: uppercase;
-  padding: 15px 0;
-  margin: 0;
+#resume > header div {
+	display: table;
+	padding-left: 0.5em;
 }
 
-[class^="section-"] > .title .title-icon,
-[class^="section-"] > .title span {
-  display: inline-block;
-  vertical-align: middle;
+#resume > header div.middle {
+	padding-top: 1.5em;
 }
 
-[class^="section-"] > .title span {
-  margin-left: 2px;
+header img {
+	display: block;
+	width: 10em;
+	border-radius: 0.275em;
+	float: right;
+	vertical-align: middle;
 }
 
-[class^="section-"] > .title .title-icon {
-  background-color: whitesmoke;
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  padding: 0.4rem 0.45rem;
+header .name {
+	line-height: 1;
 }
 
-/* Sidebar */
-.sidebar {
-  padding: 2rem;
-  background: #333438 !important;
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
+header .label {
+	font-size: 1.5rem;
+	font-weight: 400;
+	color: #757575;
 }
 
-.sidebar, .sidebar h1, .sidebar h2 {
-  color: #ffffff !important;
+section:not(.section) {
+	padding: .5em 1rem;
 }
 
-.sidebar h2 {
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem;
-  font-weight: bold;
-  margin-top: 5rem;
+section#references {
+	border-bottom:none;
 }
 
-.avatar {
-  margin: 5rem 0;
-  text-align: center;
+section#basics {
+	background: inherit;
+	margin-bottom: 0;
 }
 
-.avatar img {
-  width: 90%;
+section#skills {
+	padding-bottom: 0;
 }
 
-.section-education .item {
-  margin-bottom: 3rem;
+section#education, 
+section#work, 
+.main-summary section {
+	padding-bottom: 1em;
 }
 
-.section-education .studyTitle {
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 1.3rem;
-}
-.section-education .courses {
-  font-size: 1.2rem;
-}
-.section-education ul.courses {
-  list-style-type: none;
-  margin: 0.5rem 0 0.5rem 0;
-  padding: 0;
+header::after {
+	display: table;
+	content: " ";
+	clear: both;
 }
 
-.section-education .ul.courses li {
-  margin:0;
+h2.section-title {
+	text-align: left;
+	font-size: 1rem;
+	font-weight: 400;
+	color: #757575;
+	padding: 1em 1rem 0;
+	margin-bottom: 0.1275em;
 }
 
-.section-education .institution {
-  font-size: 1.2rem;
+.date {
+	font-weight: 700;
+	color: #757575;
 }
 
-.section-education .date {
-  font-size: 1.2rem;
+.position, .area, .institution {
+	font-weight: 700;
 }
 
-.sidebar a:link, .sidebar a:hover, .sidebar a:visited {
-  text-decoration: none;
-  color: #ffffff !important;
+#interests .item, #languages .item {
+	padding: 0 1em 1em 0;
+	border-bottom: none;
 }
 
-/* Content */
-.content {
-  padding: 5rem;
-  background: #FFFFFF;
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
+.website::before {
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-decoration: none;
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+	content: '\f14c';
 }
 
-.content h1 {
-  color: #3C3C3C;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 4rem;
-  letter-spacing: 1.0rem;
-  font-weight: bold;
+#profiles, #skills, #interests, #languages {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+  padding-bottom: 1em;
 }
 
-.content h2 {
-  color: #6D6D6D;
-  text-transform: uppercase;
-  text-align: left;
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem;
-  font-weight: bold;
-  margin-top: 5rem;
+#profiles, #location {
+	box-shadow: none;
+	padding: 0;
 }
 
-.content a:link, .content a:hover, .content a:visited {
-  text-decoration: none;
-  color: #6D6D6D;
+#profiles .item {
+	margin: 0;
+	padding: 0;
+	padding-right: 1em;
+	border-bottom: none;
 }
 
-/* Sections */
-.section-name {
-  margin: 5rem 0 10rem 0;
+#interests ul {
+	margin-top: 0.5em;
 }
 
-.section-name h2 {
-  color: #6D6D6D;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 1.5rem;
-  letter-spacing: 0.5rem;
-  font-weight: bold;
-  margin-top: 5rem;
+#publications .name {
+	font-style: italic;
 }
 
-.section-summary {
-  text-align: justify;
+.courses li, .keywords li{
+	display: inline-block;
+	background: #f0f0f0;
+	font-size: 0.9em;
+	line-height: 1;
+	color: #333;
+	padding: 0.4em 0.8em;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-radius: 3px;
 }
 
-.section-work .item {
-  margin-bottom: 2.5rem;
+#publications .date {
+	font-weight: normal;
+	color: #000;	
 }
 
-.section-work .item .position {
-  font-weight: bold;
-  color: #333438;
-  text-transform: uppercase;
-}
-
-.section-work .item .company {
-    padding: 0.5rem 0 0.5rem 0;
-    color: #6D6D6D;
-    font-weight: bold;
-}
-
-.section-work .item .summary, .section-work .item .highlights {
-    font-style: italic;
-    text-align: justify;
-}
-
-.section-volunteer .item {
-  margin-bottom: 2.5rem;
-}
-
-.section-volunteer .item .position {
-  font-weight: bold;
-  color: #333438;
-  text-transform: uppercase;
-}
-
-.section-volunteer .item .company {
-    padding: 0.5rem 0 0.5rem 0;
-    color: #6D6D6D;
-    font-weight: bold;
-}
-
-.section-volunteer .item .summary, .section-volunteer .item .highlights {
-    font-style: italic;
-    text-align: justify;
+#skills .item {
+	min-width: 15em;
+	padding: 0 .5em .8em 0;
+	border-bottom: none;
 }
 
 
-.section-publications .item {
-  margin-bottom: 2.5rem;
+/* Skills chart */
+#skills .level .bar {
+	border: 1px solid #ddd;
+	display: block;
+	width: 10em;
+	height: 5px;
+	margin: 0em 0 1em 0;
+	position: relative;
 }
 
-.section-publications .item .name {
-  font-weight: bold;
-  color: #333438;
-  text-transform: uppercase;
+#skills .level .bar::after {
+	position: absolute;
+	content: " ";
+	top: 0;
+	left: 0;
+	background: black;
+	height: 5px;
 }
 
-.section-publications .item .publication {
-    padding: 0.5rem 0 0.5rem 0;
-    color: #6D6D6D;
-    font-weight: bold;
+#skills .level.beginner .bar::after {
+	background: #EB5F51;
+	width: 2.5em;
+} 
+
+#skills .level.intermediate .bar::after {
+	background: #ffdf1f;
+	width: 5em;
+} 
+
+#skills .level.advanced .bar::after {
+	background: #59C596;
+	width: 7.5em;
+} 
+
+#skills .level.master .bar::after {
+	background: #5CB85C;
+	width: 10em;
 }
 
-.section-publications .item .summary, .section-publications .item .highlights {
-    font-style: italic;
-    text-align: justify;
+#references .item {
+	padding-left: 1em;
+	border-left: 5px solid #EB5F51;
+}
+
+.fa.social {
+	margin-right: 0.25em;
+	font-size: 1.1em;
+}
+
+/* Social Media Brand Colors */
+.google-plus {
+	color: #dd4b39;	
+}
+
+.tumblr {
+	color:#32506d;
+}
+
+.foursquare {
+	color:  #0072b1;
+}
+
+.facebook {
+	color: #3b5998;
+}
+
+.linkedin {
+	color: #007bb6;
+}
+
+.pinterest {
+	color: #cb2027;
+}
+
+.dribbble {
+	color: #ea4c89;
+}
+
+.instagram {
+	color: #517fa4;
+}
+
+.twitter {
+	color: #00aced;
+}
+
+.soundcloud { 
+	color: #ff3a00;
+}
+
+.wordpress {
+	color: #21759b;
+}
+
+.youtube {
+	color: #bb0000;
+}
+
+.github {
+	color: #171515;
+}
+
+.stack-overflow {
+	color: #828386;
+	position: relative;
+}
+
+.flickr {
+	color: #ff0084;
+}      
+
+.stack-overflow::after {
+	position: absolute;
+	left: 0;
+	content: '\f16c';
+	color: #f68a1f;
+	overflow: hidden;
+	height: 40%;
+}
+
+/******************
+*		HELPER CLASSES	
+******************/
+.fa {
+	min-width: 1.25em;
+	margin-right: 0.25em;
+	text-align: center;
+}
+
+.clear {
+	display: table;
+	clear: both;
 }
 
 
-.section-awards .item .title {
-  font-weight: bold;
-  color: #333438;
-}
-
-.section-awards .item .date, .section-awards .item .awarder {
-  font-weight: normal;
-  color: #929292;
-}
-
-.section-awards .item .summary {
-  font-weight: normal;
-  font-style: italic;
-  text-align: justify;
-}
-
-.section-languages .item .language {
-  font-weight: bold;
-  color: #333438;
-}
-
-.section-languages .item .fluency {
-  font-weight: normal;
-  color: #929292;
-}
-
-.section-interests .title {
-  font-weight: bold;
-}
-
-.section-interests .item {
-  margin: 0.8rem 0 0.8rem 0;
-  line-height: 1.9rem;
-}
-
-.section-skills .item {
-  margin-bottom: 1rem;
-}
-
-
-.section-contact .fa {
-  padding: 0.8rem 0 0 0;
-  background: #fff;
-  color: #333438;
-  border-radius: 100rem;
-  width: 3rem;
-  height: 3rem;
-  text-align: center;
-  margin: -0.4rem 0.8rem 0.8rem 0.5rem;
-  float: left;
-}
-
-.section-contact ul.contact {
-  list-style-type: none;
-  margin: 0.5rem 0 0.5rem 0;
-  padding: 0;
-}
-
-.section-contact ul.contact li {
-  margin: 1rem 0 1rem 0;
-}
-
-.section-contact ul.profiles {
-  list-style-type: none;
-  margin: 4rem 0 0.5rem 0;
-  padding: 0;
-}
-
-.section-contact ul.profiles li {
-  margin: 1rem 0 1rem 0;
-}
-
-/* Print */
-@media print {
-  body {
-    font: 10px Arial, Helvetica, sans-serif;
-    line-height: 1.4;
-    color: #929292 !important;
-  }
-
-  .container {
-    margin: 0 auto;
-    padding: 0;
-  }
-
-  #resume {
-    overflow: hidden;
-    border: none !important;
-  }
-
-  section {
-    margin-bottom: 2.5rem;
-  }
-
-  [class^="section-"] > .title {
-    text-transform: uppercase;
-    padding: 0.7rem 0;
-    margin: 0;
-  }
-
-  [class^="section-"] > .title .title-icon,
-  [class^="section-"] > .title span {
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  [class^="section-"] > .title span {
-    margin-left: 2px;
-  }
-
-  [class^="section-"] > .title .title-icon {
-    background-color: whitesmoke;
-    border-radius: 50%;
-    width: 2rem;
-    height: 2rem;
-    padding: 0.4rem 0.45rem;
-  }
-
-  /* Sidebar */
-  .sidebar {
-    padding: 2rem;
-    background: #333438 !important;
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-		color: #ffffff !important;
-  }
-
-  .sidebar, .sidebar h1, .sidebar h2 {
-    color: #ffffff !important;
-  }
-
-  .sidebar h2 {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.5rem;
-    letter-spacing: 0.5rem;
-    font-weight: bold;
-    margin-top: 5rem;
-		color: #ffffff !important;
-  }
-
-  .sidebar h2.title span {
-    color: #ffffff !important;
-}
-
-  .avatar {
-    margin: 2rem 0 2rem 1rem;
-    text-align: center;
-  }
-
-  .avatar img {
-    width: 85%;
-  }
-
-  .section-education .item {
-    margin-bottom: 3rem;
-		color: #ffffff !important;
-  }
-
-  .section-education .studyTitle span{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.1rem;
-		color: #ffffff !important;
-  }
-
-  .section-education .studyTitle span.badge{
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 1.0rem;
-		color: #ffffff !important;
-    background: #939393 !important;
-  }
-
-  .section-education .courses {
-    font-size: 1.1rem;
-		color: #ffffff !important;
-  }
-
-  .section-education ul.courses {
-    list-style-type: none;
-    margin: 0.5rem 0 0.5rem 0;
-    padding: 0;
-  }
-
-  .section-education .ul.courses li {
-    margin:0;
-		color: #ffffff !important;
-  }
-
-  .section-education .institution {
-    font-size: 1.0rem;
-		color: #ffffff !important;
-  }
-
-  .section-education .date span{
-    font-size: 1.0rem;
-		color: #ffffff !important;
-  }
-
-  .sidebar a:link, .sidebar a:hover, .sidebar a:visited {
-    text-decoration: none;
-		color: #ffffff !important;
-  }
-
-  /* Content */
-  .content {
-    padding: 3rem 5rem 3rem 2rem;
-    background: #FFFFFF !important;
-    margin-bottom: -99999px;
-    padding-bottom: 99999px;
-  }
-
-  .content h1 {
-    color: #3C3C3C !important;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 2.5rem;
-    letter-spacing: 1.0rem;
-    font-weight: bold;
-  }
-
-  .content h2 {
-    color: #6D6D6D !important;
-    text-transform: uppercase;
-    text-align: left;
-    font-size: 1.2rem;
-    letter-spacing: 0.5rem;
-    font-weight: bold;
-    margin-top: 2rem;
-  }
-
-  .content a:link, .content a:hover, .content a:visited {
-    text-decoration: none;
-    color: #6D6D6D !important;
-  }
-
-  /* Sections */
-  .section-name {
-    margin: 1rem 0 5rem 0;
-  }
-
-  .section-name h2 {
-    color: #6D6D6D !important;
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 1.2rem;
-    letter-spacing: 0.5rem;
-    font-weight: bold;
-    margin-top: 3rem;
-  }
-
-  .section-summary {
-    text-align: justify;
-  }
-
-  .section-work .item {
-    margin-bottom: 2.5rem;
-  }
-
-  .section-work .item .position {
-    font-weight: bold;
-    color: #333438 !important;
-    text-transform: uppercase;
-  }
-
-  .section-work .item .company {
-      padding: 0.5rem 0 0.5rem 0;
-      color: #6D6D6D !important;
-      font-weight: bold;
-  }
-
-  .section-work .item .summary, .section-work .item .highlights {
-      font-style: italic;
-      text-align: justify;
-  }
-
-  .section-volunteer .item {
-    margin-bottom: 2.5rem;
-  }
-
-  .section-volunteer .item .position {
-    font-weight: bold;
-    color: #333438 !important;
-    text-transform: uppercase;
-  }
-
-  .section-volunteer .item .company {
-      padding: 0.5rem 0 0.5rem 0;
-      color: #6D6D6D !important;
-      font-weight: bold;
-  }
-
-  .section-volunteer .item .summary, .section-volunteer .item .highlights {
-      font-style: italic;
-      text-align: justify;
-  }
-
-
-  .section-publications .item {
-    margin-bottom: 2.5rem;
-  }
-
-  .section-publications .item .name {
-    font-weight: bold;
-    color: #333438 !important;
-    text-transform: uppercase;
-  }
-
-  .section-publications .item .publication {
-      padding: 0.5rem 0 0.5rem 0;
-      color: #6D6D6D !important;
-      font-weight: bold;
-  }
-
-  .section-publications .item .summary, .section-publications .item .highlights {
-      font-style: italic;
-      text-align: justify;
-  }
-
-
-  .section-awards .item .title {
-    font-weight: bold;
-    color: #333438 !important;
-  }
-
-  .section-awards .item .date, .section-awards .item .awarder {
-    font-weight: normal;
-    color: #929292 !important;
-  }
-
-  .section-awards .item .summary {
-    font-weight: normal;
-    font-style: italic;
-    text-align: justify;
-  }
-
-  .section-languages .item .language {
-    font-weight: bold;
-    color: #333438 !important;
-  }
-
-  .section-languages .item .fluency {
-    font-weight: normal;
-    color: #929292 !important;
-  }
-
-  .section-interests .title {
-    font-weight: bold;
-  }
-
-  .section-interests .item {
-    margin: 0.2rem 0 0.0rem 0;
-    line-height: 1.4rem;
-  }
-
-  .section-skills .item {
-    margin-bottom: 1rem;
-  }
-
-  .section-skills .item .name {
-    color: #ffffff !important;
-  }
-
-	.section-skills .item .keywords .span {
-		color: #ffffff !important;
-		background: #929292 !important;
+/****************
+*		TABLET
+****************/
+@media screen and (min-width: 602px) { 
+	
+	#resume {
+		width: 550px;
+		margin: 0 auto;
+	}
+	section > header > h3 {
+		float:left;
+	}
+	section > header > .date {
+		float: right;
+		line-height: 1.3;
 	}
 
-  .section-skills .keywords span.label {
-      color: #000 !important;
-      background: #929292 !important;
-      line-height: 1.7rem;
-  }
-
-
-  .section-contact .fa {
-    padding: 0.5rem 0 0 0;
-    background: #ffffff  !important;
-    color: #333438 !important;
-    border-radius: 100rem;
-    width: 2.2rem;
-    height: 2.2rem;
-    text-align: center;
-    margin: -0.4rem 0.8rem 0.8rem 0.5rem;
-    float: left;
-  }
-
-  .section-contact ul.contact {
-    list-style-type: none;
-    margin: 0.2rem 0 0.2rem 0;
-    padding: 0;
-  }
-
-  .section-contact ul.contact li {
-    margin: 0.5rem 0 0.5rem 0;
-		color: #ffffff !important;
-  }
-
-  .section-contact ul.profiles {
-    list-style-type: none;
-    margin: 4rem 0 0.5rem 0;
-    padding: 0;
-  }
-
-  .section-contact ul.profiles li {
-    margin: 0.5rem 0 0.5rem 0;
-		color: #ffffff !important;
-  }
-
-  .section-contact ul.contact li span,.section-contact ul.profiles li span {
-      word-wrap: break-word;
-      white-space: pre-wrap;
-      color: #ffffff !important;
-  }
-
 }
 
-		</style>
-	</head>
-	<body data-gr-c-s-loaded="true">
 
-		<div class="container">
-			<div class="row" id="resume">
-				<div class="col-xs-4 sidebar">
-					    <section class="section-basic">
-					            <div class="avatar">
-					                <img src="./index_files/photo.jpg" alt="Kovalev Ivan" class="img-circle">
-					            </div>
-					    </section>
-					    <section class="section-contact">
-					        <h2 class="title">
-					            <span class="">Contact</span>
-					        </h2>
-					        <ul class="contact">
-					                <li class="icon-item clearfix">
-					                    <i class="fa fa-map-marker"></i>
-					                    577, Podnovie Sloboda Str.
-					                        603163
-					                        Nizhny Novgorod
-					                        
-					                        Russia
-					                </li>
-					                <li class="icon-item clearfix">
-					                    <i class="fa fa-envelope "></i>
-					                    kovalev.ivan.a@gmail.com
-					                </li>
-					                <li class="icon-item clearfix">
-					                    <i class="fa fa-phone "></i>
-					                    +7 (999) 072-2987
-					                </li>
-					        </ul>
-					            <ul class="profiles">
-					                    <li class="icon-item clearfix">
-					                        <i class="fa fa-github "></i>
-					                        <span><a target="_blank" href="https://github.com/kovalevivan">kovalevivan</a></span>
-					                    </li>
-										<li class="icon-item clearfix">
-					                        <i class="fa fa-linkedin "></i>
-					                        <span><a target="_blank" href="https://www.linkedin.com/in/kovalevia">kovalevia</a></span>
-					                    </li>
-					            </ul>
-					    </section>
-					<section class="section-education">
-						<h2 class="title">
-						    <span class="">Education</span>
-						</h2>
+/****************
+*		LAPTOP	
+****************/
+@media screen and (min-width: 1025px) { 
+	
+	#resume {
+		width: 650px;		
+		padding: 3em;
+		margin: 3em auto;
+		background: #fff;
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+	}
+
+	.section {
+		display: -webkit-box;
+		display: -moz-box;
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+		-webkit-flex-flow: row wrap;
+		flex-flow: row wrap;
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		margin-bottom: 1em;
+		margin-top: 1em;
+		border-bottom: 1px solid #eee;
+	}
+
+	.section:last-of-type {
+		border-bottom: none;
+		margin-bottom: 0;
+	}
+
+	section > header {
+		line-height: 1;
+		padding-bottom: 1em; 
+	}
+
+	h2.section-title {
+		line-height: 1.1;
+		padding-top: 0;
+	}
+
+	section:not(.section) {
+		width: 34.5em;
+		padding: 0 1em 1em 0;
+		margin-top:0;
+		border: none;
+	}
+
+	section p {
+		margin: 0;
+	}
+
+	section#basics {
+		width: auto;
+		padding-top: 1em;
+		padding-left: 1em;
+		padding-bottom: 0;
+		border-top: 1px solid #eee;
+		border-bottom: 1px solid #eee;
+	}
+
+	#profiles .item{
+		padding-bottom: 1em;
+	}
+
+	div {
+		padding: 0;
+	}
+
+	#skills .item {
+		padding-left:0;
+		margin-top: 0;
+	}
+
+	div.item {
+		margin-top: 0;
+		border-bottom: 1px solid #eee;
+	}
+
+}
+	</style>
+	
+
+	<body>
+		<div id="resume">
+				<header id="header">
+						<img src="./index_files/photo.jpg" alt="Ivan Kovalev"/>
+						<div class="middle">
+							<h1 class="name">Ivan Kovalev</h1>
+							<h2 class="label">Software Engineer</h2>
+						</div>
+
+				</header>
+				
+				<section id="basics">
+					
+						<div id="location">
+							<span class="fa fa-map-marker"></span>
+							<span class="address">
+								577, Podnovie Sloboda Str.,
+							</span>
+							<span class="postalCode">
+								603163,
+							</span>
+							<span class="city">
+								Nizhny Novgorod, Russia
+							</span>
+						</div>
+
+					<div id="contact">
+						<div class="email">
+							<span class="fa fa-envelope"></span>
+							<a href="mailto:kovalev.ivan.a@gmail.com">kovalev.ivan.a@gmail.com</a>
+						</div>
+						<div class="phone">
+							<span class="fa fa-phone-square"></span>
+							+7 (999) 072-2987
+						</div>
+					</div>
+				
+
+					<div id="profiles">
 						<div class="item">
-							<div class="studyTitle">
-								<span class="studyType">
-									Bachelor
+							<span class="network fa fa-github github"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://github.com/kovalevivan">kovalevivan</a>
 								</span>
-								<span class="area">
-									Physics
-								</span>
-							</div>
-							<div class="institution">
-								 <a target="_blank" href="http://eng.unn.ru/">Lobachevsky State University</a>
-							</div>
-							<div class="date">
-								<span class="startDate">
-									2011
-								</span>
-								<span class="endDate">
-									- 2016
-								</span>
-							</div>
+							</span>
 						</div>
 						<div class="item">
-							<div class="studyTitle">
-								<span class="area">
-									<a target="_blank" href="stepik-certificate-363-50c659f.pdf">Introduction to programming (C++)</a>
+							<span class="network fa fa-linkedin linkedin"></span>
+							<span class="username">
+								<span class="url">
+									<a href="https://www.linkedin.com/in/kovalevia">kovalevia</a>
 								</span>
-							</div>
-							<div class="institution">
-								 Yandex Academy
-							</div>
-							<div class="date">
-								<span class="startDate">
-									2018
-								</span>
-								<span class="endDate">
-									- 2018
-								</span>
-							</div>
+							</span>
 						</div>
-						<div class="item">
-							<div class="studyTitle">
-								<span class="area">
-									Summer intensive course (Java, C, Unix, English)
-								</span>
-							</div>
-							<div class="institution">
-								 NIIT
-							</div>
-							<div class="date">
-								<span class="startDate">
-									2018
-								</span>
-								<span class="endDate">
-									- 2018
-								</span>
-							</div>
-						</div>
-						<div class="item">
-							<div class="studyTitle">
-								<span class="area">
-									Back end development (Java EE, Spring, Oracle DB)
-								</span>
-							</div>
-							<div class="institution">
-								Netckracker Educational Center
-							</div>
-							<div class="date">
-								<span class="startDate">
-									2018
-								</span>
-								<span class="endDate">
-									- 2018
-								</span>
-							</div>
-						</div>
+					</div>
+				</section>
+
+				<section class="section main-summary">
+					<h2 class='section-title'>About</h2>
+					<section>
+						<p>Currently working as a Java Backend developer in software company. Before starting being a software engineer I studied physics at Lobachevsky State University of Nizhni Novgorod. This year going to get my bachelor degree. Passionate about automation, data analysis and machine leaning.</p>
 					</section>
-				</div>
-				<div class="col-xs-8 content">
-						<section class="section-name">
-							<h1>Kovalev Ivan</h1>
-							<h2>Software Engineer</h2>
-						</section>
-						<section class="section-summary">
-							<h2 class="title">
-							    <span class="">Summary</span>
-							</h2>
-							I graduated at Lobachevsky State University of Nizhni Novgorod. Before starting being a software engineer, I worked as a sound engineer. I didn't like that I had to do a lot of repeated actions in my work, so I began to learn how to automate them. Starting with writing bots for a telegram on Google Script, after half a year, I am working as a Java Developer in a software company.
-						</section>
-					<section class="section-skills">
-						<h2 class="title">
-						    <span class="">Skills</span>
-						</h2>
+				</section>
+
+				</section>
+
+				<section class="section">
+					<h2 class='section-title'>Experience</h2>
+					<section id="work">
+						<header>
+							<h3 class="name">
+								MERA
+							</h3>
+							<div class="date">
+								<span class="startDate">
+									October 2018
+								</span>
+								<span class="endDate">
+									- Present
+								</span>
+							</div>
+						</header>
+						<div class="item">
+						<div class="position">
+							Software Engineer
+						</div>
+						<div class="website">
+							<a href="https://www.mera.com/">https://www.mera.com/</a>
+						</div>
+						<div class="summary">
+							<p>Project details: Analytics and reporting platform for omnichannel contact center.</p>
+						</div>
+						<ul class="highlights">
+							<li>- Refactoring existing applications to replace proprietary base framework (Oracle Complex Event Processing) with open source alternative (Spring Integration) for fresh realese.</li>
+							<li>- Integration with existing platform of common services such as message bus (Apache Kafka), telemetry utilities, etc. for fresh release.</li>
+							<li>- Reworking architecture of system toward containerized microservices for fresh release.</li>
+							<li>- Troubleshooting/bugfix for issues/defects found by end customer.</li>
+						</ul>
+					</div>
+					</section>
+				</section>
+		
+				<section class="section">
+					<h2 class='section-title'>Education</h2>
+					<section id="education">
+							<header>
+									<h3 class="institution">
+										Lobachevsky State University of Nizhny Novgorod
+									</h3>
+								<div class="date">
+									<span class="startDate">
+										2011
+									</span>
+									<span class="endDate">
+										- Present
+									</span>
+								</div>
+							</header>
+							<div class="item">
+									<div class="studyType">
+										Bachelor
+									</div>
+									<div class="area">
+										Physics
+									</div>
+							</div>
+					</section>
+				</section>
+		
+			
+
+		
+		
+				<section class="section">
+					<h2 class='section-title'>Skills</h2>
+					<section id="skills">
 						<div class="item">
 							<div class="name">
 								Backend Development
 							</div>
-							<div class="keywords">
-								<span class="label label-default">Java EE</span>
-								<span class="label label-default">Spring Framework</span>
-								<span class="label label-default">Hibernate</span>
-								<span class="label label-default">Oracle DB</span>
-								<span class="label label-default">Kafka</span>
-								<span class="label label-default">Kubernetes</span>
-							</div>
+							<ul class="keywords">
+								<li>Java EE</li>
+								<li>Spring Framework</li>
+								<li>Hibernate</li>
+							</ul>
 						</div>
 						<div class="item">
 							<div class="name">
 								Frontend Development
 							</div>
-							<div class="keywords">
-								<span class="label label-default">GWT</span>
-								<span class="label label-default">Java Swing</span>
-								<span class="label label-default">HTML/CSS/JavaScript</span>
-							</div>
+							<ul class="keywords">
+								<li>GWT</li>
+								<li>Java Swing</li>
+								<li>HTML/CSS/JavaScript</li>
+							</ul>
 						</div>
 						<div class="item">
 							<div class="name">
 								System Administration
 							</div>
-							<div class="keywords">
-								<span class="label label-default">Unix</span>
-								<span class="label label-default">Shell</span>
-								<span class="label label-default">Docker</span>
-							</div>
+							<ul class="keywords">
+								<li>Unix</li>
+								<li>Shell</li>
+								<li>Docker</li>
+							</ul>
 						</div>
 						<div class="item">
 							<div class="name">
 								Additional
 							</div>
-							<div class="keywords">
-								<span class="label label-default">C/C++</span>
-								<span class="label label-default">Python</span>
-								<span class="label label-default">Keras</span>
-								<span class="label label-default">Google Script</span>
-							</div>
-						</div>
-					</section>
-					<section class="section-work">
-						<h2 class="title">
-						    <span class="">Experience</span>
-						</h2>
-						<div class="item">
-							<div class="position">
-								Software Developer
-							</div>
-							<div class="company">
-								<span class="name">
-									MERA
-								</span>
-								<span class="website">
-									| https://www.mera.com/
-								</span>
-								<span class="date">
-									|
-									<span class="startDate">
-										Oct 2018
-									</span>
-									<span class="endDate">
-										- Present
-									</span>
-								</span>
-							</div>                        
-							<div class="summary">
-								<p>Worked on feature implementation for Avaya Analytics</p>
-							</div>
-							<ul class="highlights">
-								<li>Java Core</li>
-								<li>Spring Framework</li>
-								<li>Oracle DB</li>
-								<li>Unix</li>
-							</ul>
-						</div>
-                        				<h2 class="title">
-						    		<span class="">Side projects</span>
-							</h2> 
-                        			<div class="item">
-							<div class="position">
-								Software Developer
-							</div>
-							<div class="company">
-                            					<span class="name">
-									MERA Gates
-								</span>
-								<span class="date">|
-									<span class="startDate">
-										Feb 2019
-									</span>
-									<span class="endDate">
-										- Present
-									</span>
-								</span>
-							</div>
-							<div class="summary">
-								<p>Mera Gates is an ML project for logging cars entering the parking. </p>
-							</div>
-							<ul class="highlights">
+							<ul class="keywords">
+								<li>C/C++</li>
 								<li>Python</li>
 								<li>Keras</li>
-								<li>Docker</li>
-							</ul>                            
-                       				 </div>
+								<li>Google Script</li>
+							</ul>
+						</div>
 					</section>
-					<section class="section-languages">
-						<h2 class="title">
-						    <span class="">Languages</span>
-						</h2>
-						<ul>
-							<li class="item">
-								<div class="language">
-									English
-									<span class="fluency">
-										| <em>Intermediate</em>
-									</span>
-								</div>
-							</li>
-							<li class="item">
-								<div class="language">
-									Russian
-									<span class="fluency">
-										| <em>Native speaker</em>
-									</span>
-								</div>
-							</li>
-						</ul>
-					</section>
-				</div>
-		</div>
+				</section>
 
+				<section class="section">
+					<h2 class='section-title'>Languages</h2>
+					<section id="languages">
+						<div class="item">
+							<div class="language">
+								English
+							</div>
+							<div class="fluency">
+								<em>Intermediate</em>
+							</div>
+						</div>
+						<div class="item">
+							<div class="language">
+								Russian
+							</div>
+							<div class="fluency">
+								<em>Native speaker</em>
+							</div>
+						</div>
+					</section>
+				</section>
+
+		
+		</div>		
+	</body>
 	
-
-</div></body></html>
+</html>

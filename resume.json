@@ -1,0 +1,95 @@
+{
+  "basics": {
+    "name": "Ivan Kovalev",
+    "label": "Software Engineer",
+    "picture": "./index_files/photo.jpg",
+    "email": "kovalev.ivan.a@gmail.com",
+    "phone": "+7 (999) 072-2987",
+    "summary": "Currently working as a Java Backend developer in software company. Before starting being a software engineer I studied physics at Lobachevsky State University of Nizhni Novgorod. This year going to get my bachelor degree. Passionate about automation, data analysis and machine leaning.",
+    "location": {
+      "address": "577, Podnovie Sloboda Str.",
+      "postalCode": "603163",
+      "city": "Nizhny Novgorod, Russia"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "kovalevivan",
+        "url": "https://github.com/kovalevivan"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "kovalevia",
+        "url": "https://www.linkedin.com/in/kovalevia"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "MERA",
+      "position": "Software Engineer",
+      "website": "https://www.mera.com/",
+      "startDate": "2018-10-30",
+      "summary": "Project details: Analytics and reporting platform for omnichannel contact center.",
+      "highlights": [
+        "- Refactoring existing applications to replace proprietary base framework (Oracle Complex Event Processing) with open source alternative (Spring Integration) for fresh realese.",
+        "- Integration with existing platform of common services such as message bus (Apache Kafka), telemetry utilities, etc. for fresh release.",
+		"- Reworking architecture of system toward containerized microservices for fresh release.",
+        "- Troubleshooting/bugfix for issues/defects found by end customer."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Lobachevsky State University of Nizhny Novgorod",
+      "area": "Physics",
+      "studyType": "Bachelor",
+      "startDate": "2011-09-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Backend Development",
+      "keywords": [
+        "Java EE",
+        "Spring Framework",
+        "Hibernate"
+      ]
+    },
+    {
+      "name": "Frontend Development",
+      "keywords": [
+        "GWT",
+        "Java Swing",
+        "HTML/CSS/JavaScript"
+      ]
+    },
+	{
+      "name": "System Administration",
+      "keywords": [
+        "Unix",
+        "Shell",
+        "Docker"
+      ]
+    },
+	{
+      "name": "Additional",
+      "keywords": [
+        "C/C++",
+        "Python",
+        "Keras",
+		"Google Script"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Russian",
+      "fluency": "Native speaker"
+    }
+  ]
+}
