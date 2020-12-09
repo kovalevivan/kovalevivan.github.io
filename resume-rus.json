@@ -1,0 +1,107 @@
+{
+  "basics": {
+    "name": "Иван Ковалев",
+    "label": "Software Engineer",
+    "picture": "./index_files/photo.jpg",
+    "email": "kovalev.ivan.a@gmail.com",
+    "phone": "+7 (999) 072-2987",
+    "summary": "В настоящее время работаю java бэкенд разработчиком. До программирования изучал физику в ННГУ им. Лобачевского. Интересуюсь автоматизацией, анализом данных и машинным обучением.",
+    "location": {
+      "postalCode": "603163",
+      "city": "Нижний Новгород, Россия"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "kovalevivan",
+        "url": "https://github.com/kovalevivan"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "kovalevia",
+        "url": "https://www.linkedin.com/in/kovalevia"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "MERA",
+      "position": "Software Engineer",
+      "website": "https://www.mera.com/",
+      "startDate": "2018-10-30",
+	  "endDate": "2020-05-01",
+      "summary": "Детали проекта: платформа аналитики и отчетов для многоканального контакт центра.",
+      "highlights": [
+        "- Рефакторинг существующего решения для замены платного фреймворка (Oracle Complex Event Processing) на opensource аналог (Spring Integration) для нового релиза.",
+        "- Интегрирование с существующей платформой общих сервисов, шина сообщений (Apache Kafka), утилиты для телеметрии и т.д.. для нового релиза",
+		"- Переработка системы из монолита в микросервисную архитектуру для нового релиза.",
+        "- Устранение неполадок найденных конечным пользователем."
+      ]
+    },
+	{
+	  "company": "Smartbics",
+	  "position": "Senior Software Engineer",
+	  "website": "https://smartbics.com/",
+	  "startDate": "2020-05-01",
+	  "summary": "Детали проекта: CRM система для одно из российских банков.",
+      "highlights": [
+        "- Разработка новых микросервисов с имплементацией бизнес логики.",
+        "- Оценка сроков выполнения задач и распредеделие на команду из 3-х человек.",
+		"- Продумывание архитектуры решений по функциональным требованиям.",
+        "- Менторинг, код ревью, собеседования."
+      ]
+	}
+  ],
+  "education": [
+    {
+      "institution": "ННГУ им. Лобачевского",
+      "area": "Физика",
+      "studyType": "Бакалавр",
+      "startDate": "2011-09-01",
+	  "endDate": "2020-07-01"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Ключевые технологии",
+      "keywords": [
+        "Spring",
+        "Spring Data",
+		"Spring Boot",
+		"Apache Kafka",
+        "Maven",
+		"Git",
+		"Jenkins",
+		"Docker",
+		"Kubernetes",
+		"Camunda BPM",
+		"Postgres"
+      ]
+    },
+	{
+      "name": "Доболнительно",
+      "keywords": [
+        "C/C++",
+        "Python",
+        "Keras",
+		"Google Script",
+		"Oracle DB",
+		"Unix",
+		"GWT",
+        "Java Swing",
+        "HTML/CSS/JavaScript",
+		"Jasper Report"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Английский",
+      "fluency": "Intermediate"
+    },
+    {
+      "language": "Русский",
+      "fluency": "Native speaker"
+    }
+  ]
+}
